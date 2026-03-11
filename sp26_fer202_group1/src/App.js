@@ -1,26 +1,30 @@
-import AuthContext from "./context/AuthContext";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Contact from "./pages/Contact";
 import AdminContact from "./pages/AdminContact";
+import AddShoe from "./pages/AddShoe";
+import EditShoe from "./pages/EditShoe";
 
 function App() {
 
   return (
 
-    <AuthContext>
-      <Router>
-        <Routes>
-          <Route path="/contact" element={<Contact />} />
+    <Router>
 
-          <Route path="/admin/contacts" element={<AdminContact />} />
+      <Routes>
 
+        <Route path="/contact" element={<Contact />} />
 
+        <Route path="/admin/contacts" element={<AdminContact />} />
 
-        </Routes>
-      </Router >
-    </AuthContext >
+        <Route path="/add-shoe" element={<AddShoe />} />
+
+        <Route path="/edit-shoe/:id" element={<EditShoe />} />
+
+      </Routes>
+
+    </Router>
+
   );
 }
 
