@@ -1,0 +1,86 @@
+.register-bg {
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+    min-height: 100vh;
+    color: #fff;
+}
+
+.register-card {
+    width: 420px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.register-card:hover {
+    transform: translateY(-5px);
+}
+
+.register-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffc107;
+    z-index: 10;
+}
+
+.input-field {
+    padding-left: 45px !important;
+    border: none;
+    border-bottom: 2px solid #ffc107;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #fff;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Placeholder trắng đậm, dễ nhìn */
+.input-field::placeholder {
+    color: #fff !important;
+    font-style: italic;
+    font-size: 0.95rem;
+    opacity: 0.8 !important;
+}
+
+.input-field:focus::placeholder {
+    color: transparent;
+}
+
+/* Feedback lỗi màu vàng warning */
+.register-form .invalid-feedback {
+    color: #ffc107 !important;
+}
+
+.register-btn {
+    background: linear-gradient(135deg, #ffc107 0%, #ffed4e 100%);
+    border: none;
+    color: #000;
+    transition: transform 0.2s ease;
+}
+
+.register-btn:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #ffed4e 0%, #ffc107 100%);
+}
+
+.register-btn:active {
+    transform: scale(0.98);
+}
