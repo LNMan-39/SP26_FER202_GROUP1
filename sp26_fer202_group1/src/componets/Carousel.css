@@ -1,0 +1,7 @@
+/* src/components/Carousel.css */
+
+.carousel-image {
+  height: 500px;
+
+  object-fit: cover;
+}
