@@ -1,3 +1,4 @@
+
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,8 +25,18 @@ import MyMessages from "./pages/MyMessages";
 import AdminContacts from "./pages/AdminContacts";
 import SearchResults from "./pages/SearchResults";
 
+import AuthContext from "./context/AuthContext";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Contact from "./pages/Contact";
+import AdminContact from "./pages/AdminContact";
+
+
 function App() {
+
   return (
+
     <AuthProvider>
       <CartProvider>
         <Router>
@@ -100,6 +111,20 @@ function App() {
         </Router>
       </CartProvider>
     </AuthProvider>
+
+    <AuthContext>
+      <Router>
+        <Routes>
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="/admin/contacts" element={<AdminContact />} />
+
+
+
+        </Routes>
+      </Router >
+    </AuthContext >
+
   );
 }
 
