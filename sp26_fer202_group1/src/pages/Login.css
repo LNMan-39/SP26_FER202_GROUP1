@@ -1,0 +1,110 @@
+.login-bg {
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+    /* Đen gradient */
+    min-height: 100vh;
+    color: #fff;
+}
+
+.login-card {
+    width: 420px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    /* Nền trắng mờ trên đen */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+    /* Text trắng */
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+.login-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffc107;
+    /* Vàng cho icon */
+    z-index: 10;
+}
+
+.input-label {
+    position: absolute;
+    left: 45px;
+    top: 12px;
+    color: #fff;
+    /* Trắng cho label */
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.input-field {
+    padding-left: 45px !important;
+    border: none;
+    border-bottom: 2px solid #ffc107;
+    /* Viền vàng */
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    /* Nền trắng mờ */
+    color: #fff;
+    /* Text trắng */
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #fff;
+    /* Viền trắng khi focus */
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Placeholder trắng đậm, dễ nhìn */
+.input-field::placeholder {
+    color: #fff !important;
+    /* Trắng đậm */
+    font-style: italic;
+    font-size: 0.95rem;
+    opacity: 0.8 !important;
+}
+
+.input-field:focus::placeholder {
+    color: transparent;
+}
+
+/* Feedback lỗi màu vàng warning */
+.login-form .invalid-feedback {
+    color: #ffc107 !important;
+}
+
+.login-btn {
+    background: linear-gradient(135deg,
+            #ffc107 0%,
+            #ffed4e 100%);
+    /* Gradient vàng */
+    border: none;
+    color: #000;
+    /* Text đen trên vàng */
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #ffed4e 0%, #ffc107 100%);
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+}
