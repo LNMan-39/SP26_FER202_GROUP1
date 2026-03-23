@@ -301,7 +301,7 @@
       }
     },
     {
-      "id": "16",
+      "id": "13",
       "title": "Nike-Air-Max-Fire-Light-Bone",
       "author": "Nike Shoes",
       "price": 5000000,
@@ -561,21 +561,6 @@
       "status": "unread",
       "reply": "",
       "date": "2025-11-12T10:00:00Z"
-    },
-    {
-      "id": "d6e6",
-      "name": "Nguyen Phuoc Hoa",
-      "email": "hoaphuoc605@gmail.com",
-      "message": "gdgdgd",
-      "userId": null,
-      "status": "unread",
-      "reply": ""
-    },
-    {
-      "id": "56e2",
-      "name": "Nguyen Phuoc Hoa",
-      "email": "hoanpce180443@fpt.edu.vn",
-      "message": "1234"
     }
   ],
   "orders": [
