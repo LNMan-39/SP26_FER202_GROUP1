@@ -1,10 +1,8 @@
-
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/Header";
-import SearchBar from "./components/SearchBar";
 import AddShoe from "./pages/AddShoe";
 import Contact from "./pages/Contact";
 import EditShoe from "./pages/EditShoe";
@@ -25,18 +23,8 @@ import MyMessages from "./pages/MyMessages";
 import AdminContacts from "./pages/AdminContacts";
 import SearchResults from "./pages/SearchResults";
 
-import AuthContext from "./context/AuthContext";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Contact from "./pages/Contact";
-import AdminContact from "./pages/AdminContact";
-
-
 function App() {
-
   return (
-
     <AuthProvider>
       <CartProvider>
         <Router>
@@ -54,6 +42,8 @@ function App() {
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/order-success" element={<OrderSuccess />} />
               <Route path="/orders" element={<OrderList />} />
+
+              {/* User */}
               <Route
                 path="/profile"
                 element={
@@ -62,6 +52,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
               <Route
                 path="/my-messages"
                 element={
@@ -69,9 +60,9 @@ function App() {
                     <MyMessages />
                   </PrivateRoute>
                 }
-              />{" "}
-              {/* Thêm route */}
-              {/* Admin Protected Routes */}
+              />
+
+              {/* Admin */}
               <Route
                 path="/product-list"
                 element={
@@ -80,6 +71,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
               <Route
                 path="/add-shoe"
                 element={
@@ -88,6 +80,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
               <Route
                 path="/edit-shoe/:id"
                 element={
@@ -96,6 +89,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
               <Route
                 path="/admin-contacts"
                 element={
@@ -103,28 +97,13 @@ function App() {
                     <AdminContacts />
                   </PrivateRoute>
                 }
-              />{" "}
-              {/* Thêm route */}
+              />
             </Routes>
           </div>
           <Footer />
         </Router>
       </CartProvider>
     </AuthProvider>
-
-    <AuthContext>
-      <Router>
-        <Routes>
-          <Route path="/contact" element={<Contact />} />
-
-          <Route path="/admin/contacts" element={<AdminContact />} />
-
-
-
-        </Routes>
-      </Router >
-    </AuthContext >
-
   );
 }
 
