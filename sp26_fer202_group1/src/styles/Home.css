@@ -1,0 +1,22 @@
+/* src/styles/Home.css */
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.description-text {
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
